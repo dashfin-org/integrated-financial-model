@@ -1,11 +1,12 @@
 import React from 'react';
+import { ChartComponent } from './components/ChartComponent';
 import VixSpreadAnalysis from './components/VixSpreadAnalysis';
+import { initialData } from './data/initialData'; // We will create this file next
 
 // Mock data for the macro indicators
 const MOCK_MACRO_DATA = {
   vixLevel: 25.5,
   creditSpread: 450, // in basis points
-  tenYearYield: 4.2,
 };
 
 function App() {
@@ -17,20 +18,22 @@ function App() {
       </header>
 
       <main>
-        <h2 style={{ color: '#24292e', borderBottom: '1px solid #e1e4e8', paddingBottom: '8px' }}>Global Macro Market Indicators</h2>
-        <div className="widgets-container" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+        <div className="main-layout" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
           
-          {/* Placeholder for other macro widgets like the Yield Curve */}
-          <div className="yield-curve-widget macro-analysis-widget" style={{ border: '1px solid #d1d5da', padding: '15px', borderRadius: '8px', flex: 1, backgroundColor: 'white', minWidth: '300px' }}>
-             <h3>10Y Yield Curve</h3>
-             <p style={{ color: '#586069' }}>Analysis for the yield curve would be displayed here.</p>
+          {/* Main Chart Component */}
+          <div className="chart-container" style={{ flex: 3, minWidth: '600px', backgroundColor: 'white', border: '1px solid #d1d5da', borderRadius: '8px', padding: '15px' }}>
+            <h2>SPY - S&P 500 ETF</h2>
+            <ChartComponent data={initialData} />
           </div>
 
-          {/* Our new, active component */}
-          <VixSpreadAnalysis 
-            vixLevel={MOCK_MACRO_DATA.vixLevel} 
-            creditSpread={MOCK_MACRO_DATA.creditSpread} 
-          />
+          {/* Sidebar for Macro Indicators */}
+          <div className="sidebar" style={{ flex: 1, minWidth: '300px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <h2 style={{ color: '#24292e', borderBottom: '1px solid #e1e4e8', paddingBottom: '8px', marginBottom: '0' }}>Macro Indicators</h2>
+            <VixSpreadAnalysis 
+              vixLevel={MOCK_MACRO_DATA.vixLevel} 
+              creditSpread={MOCK_MACRO_DATA.creditSpread} 
+            />
+          </div>
 
         </div>
       </main>

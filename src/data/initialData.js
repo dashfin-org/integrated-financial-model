@@ -1,0 +1,15 @@
+export const initialData = [
+	{ open: 178.59, high: 180.84, low: 178.21, close: 180.57, time: '2025-10-01' },
+	{ open: 180.82, high: 181.33, low: 179.12, close: 179.80, time: '2025-10-02' },
+	{ open: 179.46, high: 180.48, low: 178.44, close: 180.01, time: '2025-10-03' },
+	{ open: 180.21, high: 182.26, low: 179.91, close: 181.41, time: '2025-10-06' },
+	{ open: 181.56, high: 183.01, low: 181.12, close: 182.45, time: '2025-10-07' },
+	{ open: 182.48, high: 183.20, low: 180.50, close: 181.19, time: '2025-10-08' },
+	{ open: 181.08, high: 183.18, low: 180.32, close: 182.76, time: '2025-10-09' },
+	{ open: 183.25, high: 184.50, low: 182.33, close: 183.89, time: '2025-10-10' },
+	{ open: 183.71, high: 185.00, low: 183.41, close: 184.80, time: '2025-10-13' },
+	{ open: 184.94, high: 185.19, low: 183.11, close: 183.34, time: '2025-10-14' },
+    { open: 183.08, high: 184.10, low: 181.89, close: 182.00, time: '2025-10-15' },
+    { open: 181.90, high: 182.50, low: 179.80, close: 180.15, time: '2025-10-16' },
+    { open: 180.50, high: 181.75, low: 179.50, close: 181.20, time: '2025-10-17' },
+];
